@@ -7,7 +7,7 @@ def rollDice(x, y):
     dice1 = 1
     total = 0
     while c != 'q':
-        if y <= 9:
+        if y <= 9 and y > 0:
             for i in range(x):
                 print("Rolling...")
                 time.sleep(1)
