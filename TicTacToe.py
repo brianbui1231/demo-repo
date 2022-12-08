@@ -12,22 +12,22 @@ tu.screensize(100, 100, 'black')
 t.pensize(2)
 t.shape("circle")
 t.pencolor("white")
-t.speed(5)
+t.speed(0)
 #pen 2
 t1.pensize(2)
 t1.shape("circle")
 t1.pencolor("white")
-t1.speed(5)
+t1.speed(0)
 #pen 3
 t2.pensize(2)
 t2.shape("circle")
 t2.pencolor("white")
-t2.speed(5)
+t2.speed(0)
 #pen 4
 t3.pensize(2)
 t3.shape("circle")
 t3.pencolor("white")
-t3.speed(5)
+t3.speed(0)
 
 #the outline
 
