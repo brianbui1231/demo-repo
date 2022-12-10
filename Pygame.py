@@ -77,7 +77,7 @@ while True:
     screen.blit(ts, (350, 50))
     clock.tick(60)
     stickMan(screen, xC, yC)
-    object1(screen, xC, yO)
+    object1(screen, xO, yO)
 
     print(f'stick: {xC}, {yC}')
     print(f'object: {xO}, {yO}')
