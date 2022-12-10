@@ -1,10 +1,10 @@
 import pygame
 from sys import exit
-
+import random
 pygame.init()
 screen = pygame.display.set_mode((800, 500))
 clock = pygame.time.Clock()
-title = pygame.display.set_caption("Best game")
+title = pygame.display.set_caption("Stick Game")
 bg = pygame.Surface((200, 100))
 bg.fill("Red")
 text = pygame.font.Font(None, 50)
@@ -65,19 +65,19 @@ while True:
     score += 1
     if xO <= -20:
         xO = 740
-    elif (xO <= xC and yC == yO) or (xO == xC and yC == yO):
+    elif (xO <= xC) and (xO == xC and yC == yO):
         xO = 740
-        score == 0
+        score -= score
         objectSpeed == 1
-    if score % 100 == 0:
-        objectSpeed -= -1
-    
-    ts = text.render(f"Score: {score}", False, "Blue")
+    if score % 1000 == 0:
+        objectSpeed += 0.25
     pygame.display.update()
+    ts = text.render(f"Score: {score}", True, "Blue")
     screen.fill((0, 0, 0))
     screen.blit(ts, (350, 50))
     clock.tick(60)
     stickMan(screen, xC, yC)
-    object1(screen, xO, yO)
+    object1(screen, xC, yO)
+
     print(f'stick: {xC}, {yC}')
     print(f'object: {xO}, {yO}')
