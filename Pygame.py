@@ -65,12 +65,14 @@ while True:
     score += 1
     if xO <= -20:
         xO = 740
-    elif (xO <= xC) and (xO == xC and yC == yO):
-        xO = 740
-        score -= score
-        objectSpeed == 1
+    if (xO <= xC and yC > yO):
+        if xO <= xC and yC == yO:
+            xO = 740
+            score -= score
+            objectSpeed == objectSpeed
+    else    
     if score % 1000 == 0:
-        objectSpeed += 0.25
+        objectSpeed += 0.5
     pygame.display.update()
     ts = text.render(f"Score: {score}", True, "Blue")
     screen.fill((0, 0, 0))

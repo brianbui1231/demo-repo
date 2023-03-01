@@ -51,4 +51,8 @@ t2.setpos(-200, -400)
 t3.setpos(200, -400)
 t3.setpos(200, 400)
 t2.setpos(-200, 400)
+
+turtle.listen()
+
+
 tu.done()
